@@ -1,0 +1,146 @@
+footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  row-gap: $lightSpacing + 1;
+  background: $darkBlue;
+  min-height: 200px;
+  * {
+    color: $lightGray;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    ul {
+      padding: 0;
+      height: 185px;
+      > * {
+        margin: 1rem 0;
+        text-transform: capitalize;
+      }
+    }
+    li {
+      list-style-type: none;
+      a {
+        justify-content: flex-start;
+      }
+    }
+    @media screen and (min-width: 530px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &.container {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+  .contactUs {
+    > * {
+      margin: $littleShortSpacing 0;
+    }
+    .logo {
+      justify-content: flex-start;
+      @media screen and(min-width:$tabletBreakPoint) {
+        img {
+          height: 45px;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+     
+      * {
+        margin: 0.7rem 0;
+        outline: none;
+        border: none;
+        border-radius: $lightBorderRadius;
+      }
+      input {
+        color: $darkGray;
+        height: 2.3rem;
+        padding: 0 1rem;
+        width: 100%;
+      }
+      button {
+        width: 40% !important;
+        display: flex;
+        justify-content: center;
+        font-size: 0.8rem;
+        margin-right: 7px;
+      }
+      @media screen and (min-width: 530px) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 45px;
+        input {
+          width: 65% !important;
+          margin-right: 0.5rem;
+          height: 100%;
+        }
+        button {
+          margin-right: 0;
+          width: 30% !important;
+          height: 100%;
+        }
+      }
+      @media screen and(min-width:$tabletBreakPoint) {
+        flex-direction: column;
+        justify-content: center;
+        height: 150px;
+        margin: 0;
+        input {
+          width: 100% !important;
+          height: 40px;
+          margin-right: 0;
+        }
+        button {
+          width: 100% !important;
+          height: 40px;
+        }
+      }
+      @media screen and (min-width: 1060px) {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 45px;
+        margin: $littleShortSpacing 0;
+        input {
+          width: 67% !important;
+          margin-right: 0.5rem !important;
+          height: 100% !important;
+        }
+        button {
+          margin-right: 0 !important;
+          width: 30% !important;
+          height: 100% !important;
+        }
+      }
+    }
+
+    span {
+      a {
+        justify-content: flex-start;
+        align-items: center;
+        height: 2.5rem;
+        img {
+          width: 20px;
+          height: auto;
+        }
+      }
+      p {
+        margin-left: $littleShortSpacing;
+      }
+    }
+  }
+  @media screen and(min-width:$tabletBreakPoint) {
+    grid-template-columns: 35% 50%;
+    column-gap: 15%;
+    p {
+      font-size: 0.9rem !important;
+    }
+  }
+}

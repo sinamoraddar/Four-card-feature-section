@@ -1,0 +1,19 @@
+{
+  "name": "four-card-feature-section",
+  "version": "1.0.0",
+  "description": "[My Solution](https://sinamoraddar.github.io/Fylo-landing-page-with-detailed-integrations-section/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinamoraddar/Four-card-feature-section.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinamoraddar/Four-card-feature-section/issues"
+  },
+  "homepage": "https://github.com/sinamoraddar/Four-card-feature-section#readme"
+}

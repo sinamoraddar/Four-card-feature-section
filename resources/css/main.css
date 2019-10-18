@@ -1,0 +1,621 @@
+@import "../../vendors/css/normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:700&display=swap");
+.header__curvedBottom, header section .header__image, header {
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1.75rem 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 1.75rem 4rem;
+  }
+}
+
+a {
+  font-size: 0.77rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 0.1rem 0;
+}
+a:hover, a:active {
+  text-decoration: underline !important;
+}
+
+.link {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.greenButton {
+  background: #05d69b !important;
+  border-radius: 2.5px !important;
+  transition: 0.1s ease-in;
+}
+@media screen and (min-width: 768px) {
+  .greenButton:hover {
+    background: #04a477 !important;
+  }
+}
+
+.bigButton {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.65rem 3.5rem;
+}
+
+p {
+  color: gray;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+header {
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/bg-intro-mobile.svg");
+  background-size: auto !important;
+  background-position: right top !important;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .logo {
+  display: inline-block;
+  width: 5.2rem;
+}
+header nav .logo img {
+  width: 100%;
+  height: auto;
+}
+header nav span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 43%;
+}
+header nav span .greenButton {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  margin-left: 0.5rem;
+}
+header section {
+  position: relative;
+  top: 30px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header section h1 {
+  font-size: 1.8rem;
+}
+header section span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header section span .greenButton {
+  -webkit-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+  box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+  margin: 1.3rem 0;
+}
+header section .header__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/illustration-main.svg");
+  background-size: 100% auto !important;
+  width: 65%;
+  max-width: 300px;
+}
+header section .header__image img {
+  visibility: hidden;
+  width: 100%;
+}
+
+.header__curvedBottom {
+  position: relative;
+  bottom: -5px;
+  z-index: -1;
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/headerBottomBackground-mobile.svg");
+  background-size: 100% 100% !important;
+  background-position: bottom !important;
+  width: 100%;
+}
+.header__curvedBottom img {
+  visibility: hidden;
+  width: 100%;
+}
+.header__curvedBottom img:nth-of-type(2) {
+  display: none;
+}
+
+@media screen and (min-width: 375px) {
+  header nav .logo {
+    width: 6rem;
+  }
+  header nav span {
+    justify-content: flex-end;
+  }
+  header section span h1 {
+    max-width: 700px;
+  }
+  header section span p {
+    max-width: 450px;
+  }
+  header section span .greenButton {
+    padding: 1em 4.5em !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/bg-intro-desktop.svg");
+    background-size: 55% 90% !important;
+  }
+  header nav span .greenButton {
+    margin-left: 1.5rem;
+  }
+  header section {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    top: 0;
+  }
+  header section > * {
+    width: 50% !important;
+    height: 100%;
+  }
+  header section span {
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 4rem;
+  }
+  header section span * {
+    text-align: start;
+  }
+  header section .header__image {
+    min-width: 310px;
+    max-width: 450px;
+    margin-left: 5rem;
+  }
+
+  .header__curvedBottom {
+    background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/headerBottomBackground-desktop.svg");
+    position: relative;
+  }
+  .header__curvedBottom img:first-child {
+    display: none !important;
+  }
+  .header__curvedBottom img:nth-of-type(2) {
+    display: initial;
+  }
+}
+main {
+  margin-bottom: 3.5rem;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section * {
+  text-align: center;
+}
+main section span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+  width: 100%;
+}
+main section p {
+  font-size: 0.95rem;
+}
+main section h2 {
+  font-size: 1.4rem;
+  color: #070439;
+  line-height: 1.5;
+}
+main span:nth-of-type(2) {
+  display: grid;
+  row-gap: 2.6rem;
+}
+main span:nth-of-type(2) figure figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+main .introduction__features {
+  background-color: #fafafa;
+}
+main .introduction__features__background {
+  position: relative;
+  top: -3px;
+  z-index: -1;
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/headerBottomBackground-mobile.svg");
+  background-size: 100% 100% !important;
+  transform: rotate(180deg);
+}
+main .introduction__features__background img {
+  visibility: hidden;
+  width: 100%;
+}
+main .introduction__features__background img:nth-of-type(2) {
+  display: none;
+}
+main .introduction__apps {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+main .introduction__apps span:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 210px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+main .introduction__apps span:nth-of-type(2) figure {
+  width: 100%;
+  height: 100%;
+  background: white;
+  margin: 0;
+}
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(1) div {
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/logo-slack.png");
+}
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(2) div {
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/logo-gsuite.png");
+}
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(3) div {
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/logo-trello.png");
+}
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(4) div {
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/logo-asana.png");
+}
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) div {
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/logo-salesforce.png");
+}
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(6) div {
+  background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/logo-typeform.png");
+}
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(4) div, main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) div {
+  background-size: 47% auto !important;
+}
+main .introduction__apps span:nth-of-type(2) figure div {
+  width: 100%;
+  height: 37%;
+  border-radius: 2.5px 2.5px 0 0;
+  padding: 1.3rem;
+  background-size: 55% auto !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+main .introduction__apps span:nth-of-type(2) figure div img {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+main .introduction__apps span:nth-of-type(2) figure > * {
+  -webkit-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
+}
+main .introduction__apps span:nth-of-type(2) figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0 0 2.5px 2.5px;
+  margin: 0;
+  padding: 1.3rem 0.5rem;
+  height: 63%;
+}
+main .introduction__apps span:nth-of-type(2) figure figcaption p {
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+main .introduction__apps span:nth-of-type(2) figure figcaption h3 {
+  margin: 0 !important;
+}
+@media screen and (min-width: 585px) {
+  main .introduction__apps span:nth-of-type(2) {
+    grid-template-columns: 210px 210px;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 920px) {
+  main .introduction__apps span:nth-of-type(2) {
+    grid-template-columns: auto auto auto;
+  }
+  main .introduction__apps span:nth-of-type(2) figure {
+    max-width: 210px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  main .introduction__apps span:nth-of-type(2) {
+    justify-content: flex-end;
+    column-gap: 1rem;
+    row-gap: 0;
+  }
+  main .introduction__apps span:nth-of-type(2) figure:nth-child(-n+3) {
+    margin-bottom: 1.5rem;
+  }
+  main .introduction__apps span:nth-of-type(2) figure:nth-of-type(2),
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) {
+    position: relative;
+    top: -3rem;
+  }
+  main .introduction__apps span:nth-of-type(2) figure figcaption {
+    max-height: 200px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  main .introduction__apps {
+    margin-top: -5rem;
+    grid-template-columns: 30% 70% !important;
+    column-gap: 1.3rem;
+  }
+  main .introduction__apps span:first-of-type * {
+    text-align: start;
+  }
+  main .introduction__apps span:first-of-type br {
+    display: none;
+  }
+}
+main .introduction__signUp p {
+  margin-bottom: 2.5rem;
+  width: 85%;
+}
+main .introduction__signUp .bigButton {
+  padding: 1rem 4.5rem;
+}
+@media screen and (min-width: 1300px) {
+  main .introduction__signUp p {
+    max-width: 650px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  main p {
+    max-width: 450px;
+  }
+  main .introduction__features span:nth-of-type(2) * {
+    margin: 0;
+  }
+  main .introduction__features span:nth-of-type(2) figure {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .introduction__features span:nth-of-type(2) figure img {
+    height: 100px !important;
+    width: auto !important;
+  }
+  main .introduction__features span:nth-of-type(2) figure figcaption {
+    margin-top: 2rem;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.05rem !important;
+  }
+
+  main section h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+  main section h2 br {
+    display: none;
+  }
+  main .introduction__features span:nth-of-type(2) {
+    grid-template-columns: auto auto auto;
+    column-gap: 1.5rem;
+  }
+  main .introduction__features__background {
+    background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/headerBottomBackground-desktop.svg");
+  }
+  main .introduction__features__background img:nth-of-type(1) {
+    display: none;
+  }
+  main .introduction__features__background img:nth-of-type(2) {
+    display: initial;
+  }
+  main .introduction__apps {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  row-gap: 3.5rem;
+  background: #070439;
+  min-height: 200px;
+}
+footer * {
+  color: #fafafa;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer nav ul {
+  padding: 0;
+  height: 185px;
+}
+footer nav ul > * {
+  margin: 1rem 0;
+  text-transform: capitalize;
+}
+footer nav li {
+  list-style-type: none;
+}
+footer nav li a {
+  justify-content: flex-start;
+}
+@media screen and (min-width: 530px) {
+  footer nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+footer.container {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+footer .contactUs > * {
+  margin: 1.3rem 0;
+}
+footer .contactUs .logo {
+  justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  footer .contactUs .logo img {
+    height: 45px;
+  }
+}
+footer .contactUs form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .contactUs form * {
+  margin: 0.7rem 0;
+  outline: none;
+  border: none;
+  border-radius: 2.5px;
+}
+footer .contactUs form input {
+  color: #2b2b2b;
+  height: 2.3rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+footer .contactUs form button {
+  width: 40% !important;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 7px;
+}
+@media screen and (min-width: 530px) {
+  footer .contactUs form {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+  }
+  footer .contactUs form input {
+    width: 65% !important;
+    margin-right: 0.5rem;
+    height: 100%;
+  }
+  footer .contactUs form button {
+    margin-right: 0;
+    width: 30% !important;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .contactUs form {
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    margin: 0;
+  }
+  footer .contactUs form input {
+    width: 100% !important;
+    height: 40px;
+    margin-right: 0;
+  }
+  footer .contactUs form button {
+    width: 100% !important;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1060px) {
+  footer .contactUs form {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    margin: 1.3rem 0;
+  }
+  footer .contactUs form input {
+    width: 67% !important;
+    margin-right: 0.5rem !important;
+    height: 100% !important;
+  }
+  footer .contactUs form button {
+    margin-right: 0 !important;
+    width: 30% !important;
+    height: 100% !important;
+  }
+}
+footer .contactUs span a {
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.5rem;
+}
+footer .contactUs span a img {
+  width: 20px;
+  height: auto;
+}
+footer .contactUs span p {
+  margin-left: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    grid-template-columns: 35% 50%;
+    column-gap: 15%;
+  }
+  footer p {
+    font-size: 0.9rem !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

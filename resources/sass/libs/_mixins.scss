@@ -1,0 +1,7 @@
+@mixin backgroundUrl($div, $url) {
+  &:nth-of-type(#{$div}) {
+    div {
+      background: url($url);
+    }
+  }
+}

@@ -1,0 +1,262 @@
+main {
+  margin-bottom: $normalSpacing;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    * {
+      text-align: center;
+    }
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: $lightSpacing !important;
+      padding-bottom: $lightSpacing !important;
+      width: 100%;
+    }
+    p {
+      // width: 90%;
+      font-size: 0.95rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: hsl(243, 87%, 12%);
+      line-height: $normalLineHeight;
+    }
+  }
+  span:nth-of-type(2) {
+    display: grid;
+    row-gap: 2.6rem;
+    figure {
+      figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 1.1rem;
+        font-weight: $semiBoldBodyFontWeight;
+        margin: 2rem 0;
+      }
+    }
+  }
+
+  .introduction__features {
+    background-color: hsl(106, 0%, 98%);
+  }
+  .introduction__features__background {
+    position: relative;
+    top: -3px;
+    z-index: -1;
+    img {
+      visibility: hidden;
+      width: 100%;
+    }
+    img:nth-of-type(2) {
+      display: none;
+    }
+    background: url($fylo+"/vendors/images/headerBottomBackground-mobile.svg");
+    background-size: 100% 100% !important;
+    transform: rotate(180deg);
+  }
+  //   introduction apps section
+  .introduction__apps {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    span:nth-of-type(2) {
+      display: grid;
+      grid-template-columns: 210px;
+      justify-content: center;
+      margin: 0 auto;
+      width: 100%;
+      figure {
+        width: 100%;
+        height: 100%;
+        background: white;
+        @include backgroundUrl(1, $fylo + "/vendors/images/logo-slack.png");
+        @include backgroundUrl(2, $fylo + "/vendors/images/logo-gsuite.png");
+        @include backgroundUrl(3, $fylo + "/vendors/images/logo-trello.png");
+        @include backgroundUrl(4, $fylo + "/vendors/images/logo-asana.png");
+        @include backgroundUrl(
+          5,
+          $fylo + "/vendors/images/logo-salesforce.png"
+        );
+        @include backgroundUrl(6, $fylo + "/vendors/images/logo-typeform.png");
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          div {
+            background-size: 47% auto !important;
+          }
+        }
+        div {
+          //   display: flex;
+          //   justify-content: center;
+          //   align-items: center;
+          width: 100%;
+          height: 37%;
+
+          border-radius: $lightBorderRadius $lightBorderRadius 0 0;
+          padding: $littleShortSpacing;
+          background-size: 55% auto !important;
+          //   max-width: 70%;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+
+          img {
+            visibility: hidden;
+            width: 100%;
+            // max-width: 100%;
+            height: 100%;
+          }
+        }
+        > * {
+          -webkit-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
+          -moz-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
+        }
+        figcaption {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          border-radius: 0 0 $lightBorderRadius $lightBorderRadius;
+          margin: 0;
+          padding: $littleShortSpacing 0.5rem;
+          //   min-height: 200px;
+          height: 63%;
+          p {
+            margin-bottom: 2rem;
+            font-weight: $regularBodyFontWeight;
+          }
+          h3 {
+            margin: 0 !important;
+          }
+        }
+
+        margin: 0;
+      }
+      @media screen and (min-width: 585px) {
+        grid-template-columns: 210px 210px;
+        column-gap: 2rem;
+      }
+      @media screen and (min-width: 920px) {
+        grid-template-columns: auto auto auto;
+        figure {
+          max-width: 210px;
+        }
+      }
+      @media screen and (min-width: 1300px) {
+        justify-content: flex-end;
+        column-gap: 1rem;
+        row-gap: 0;
+        figure:nth-child(-n + 3) {
+          margin-bottom: 1.5rem;
+        }
+        figure:nth-of-type(2),
+        figure:nth-of-type(5) {
+          position: relative;
+          top: -3rem;
+        }
+        figure {
+          figcaption {
+            max-height: 200px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1300px) {
+      margin-top: -5rem;
+      grid-template-columns: 30% 70% !important;
+      column-gap: $littleShortSpacing;
+      span:first-of-type {
+        * {
+          text-align: start;
+        }
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  //   introduction__signUp section
+  .introduction__signUp {
+    p {
+      margin-bottom: $lightSpacing;
+      width: 85%;
+    }
+    .bigButton {
+      padding: 1rem 4.5rem;
+    }
+    @media screen and(min-width:1300px) {
+      p {
+        max-width: 650px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobileBreakPoint) {
+  main {
+    p {
+      max-width: 450px;
+    }
+    .introduction__features {
+      span:nth-of-type(2) {
+        * {
+          margin: 0;
+        }
+        figure {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          img {
+            height: 100px !important;
+            width: auto !important;
+          }
+          figcaption {
+            margin-top: 2rem;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $tabletBreakPoint) {
+  p {
+    font-size: 1.05rem !important;
+  }
+  main {
+    section {
+      h2 {
+        font-size: 1.8rem;
+        margin: 1rem 0;
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .introduction__features {
+      span:nth-of-type(2) {
+        grid-template-columns: auto auto auto;
+        column-gap: 1.5rem;
+      }
+    }
+    .introduction__features__background {
+      background: url($fylo+"/vendors/images/headerBottomBackground-desktop.svg");
+      img:nth-of-type(1) {
+        display: none;
+      }
+      img:nth-of-type(2) {
+        display: initial;
+      }
+    }
+    .introduction__apps {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
+  }
+}

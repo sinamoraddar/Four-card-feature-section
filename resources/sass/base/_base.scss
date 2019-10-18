@@ -1,0 +1,114 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+// body {
+//   font-size: 100%;
+//   height: 100vh;
+// }
+.container {
+  padding: 1.75rem 1.2rem;
+  @media screen and (min-width: $tabletBreakPoint) {
+    padding: 1.75rem 4rem;
+  }
+}
+
+// .siteLogo {
+//   width: 10vw;
+//   max-width: 150px;
+//   min-width: 120px;
+//   height: auto;
+//   img {
+//     width: 100%;
+//     height: auto;
+//   }
+//   @media screen and (max-width: $mobileBreakPoint) {
+//     min-width: unset;
+//     width: 30vw;
+//   }
+// }
+
+a {
+  font-size: $veryShortFontSize;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: $veryShortSpacing 0;
+  &:hover,
+  &:active {
+    text-decoration: underline !important;
+  }
+}
+
+// .logo {
+//   img {
+//     width: 100%;
+//     height: auto;
+//   }
+// }
+
+.link {
+  text-transform: capitalize;
+  //   font-size: $veryShortFontSize + 10 !important;
+  //   padding: $veryShortSpacing $veryShortSpacing !important;
+  //   margin-left: $veryShortSpacing !important;
+  text-align: center;
+  //   &:hover {
+  //     color: $gray;
+  //   }
+}
+.greenButton {
+  background: $green !important;
+  border-radius: $lightBorderRadius !important;
+  transition: 0.1s ease-in;
+  @media screen and (min-width: $tabletBreakPoint) {
+    &:hover {
+      background: darken($green, 10%) !important;
+    }
+  }
+}
+.bigButton {
+  font-weight: $semiBoldBodyFontWeight;
+  font-size: 1rem;
+  padding: $littleShortSpacing/2 $shortSpacing;
+}
+
+// h1 {
+//   font-size: $normalHeadingsFontSize;
+//   text-align: center;
+// }
+
+// .signUpForm {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-appearance: none;
+//   -webkit-box-orient: vertical;
+//   -webkit-box-direction: normal;
+//       -ms-flex-direction: column;
+//           flex-direction: column;
+//   width: 100%;
+//   * {
+//     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+//     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.144);
+//     width: 100%;
+//     height: 45px;
+//     margin: $littleShortSpacing 0 !important;
+//     padding: 0 !important;
+//     border: none;
+//     outline: none;
+//   }
+//   input {
+//     padding: $veryShortSpacing ($shortSpacing + 10) !important;
+//     font-size: $shortFontSize;
+//     border-radius: $lightBorderRadius !important;
+//   }
+// }
+p {
+  color: $gray;
+  line-height: $normalLineHeight;
+  font-size: $shortFontSize;
+}
